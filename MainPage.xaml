@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppEstatico.MainPage"
+             BackgroundColor="#EBF5FF">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!-- Estilos para el header -->
+            <Style x:Key="HeaderStyle" TargetType="StackLayout">
+                <Setter Property="BackgroundColor" Value="#585858" />
+                <Setter Property="Padding" Value="20" />
+                <Setter Property="Margin" Value="0,0,0,10" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="VerticalOptions" Value="Start" />
+                <Setter Property="Orientation" Value="Vertical" />
+            </Style>
+
+            <!-- Estilo para los textos en el header -->
+            <Style x:Key="HeaderTextStyle" TargetType="StackLayout">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+
+            <!-- Estilo para el nombre -->
+            <Style x:Key="NameStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="24" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+
+            <!-- Estilo para la posición -->
+            <Style x:Key="PositionStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="TextColor" Value="#C2BEBE" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+
+            <!-- Estilos para las secciones -->
+            <Style x:Key="SectionTitleStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="Margin" Value="10,20,10,10" />
+            </Style>
+
+            <Style x:Key="SubSectionTitleStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="Margin" Value="0,10,0,0" />
+            </Style>
+
+            <Style x:Key="SubSectionDetailStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="TextColor" Value="#666666" />
+            </Style>
+
+            <Style x:Key="SubSectionLocationStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="FontAttributes" Value="Italic" />
+                <Setter Property="TextColor" Value="#666666" />
+            </Style>
+
+            <Style x:Key="ContentTextStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="Margin" Value="0,0,0,5" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <StackLayout>
+            <!-- Header -->
+            <StackLayout Style="{StaticResource HeaderStyle}">
+                <StackLayout Style="{StaticResource HeaderTextStyle}">
+                    <Label Text="Diego Fernandez" Style="{StaticResource NameStyle}" />
+                    <Label Text="DESARROLLADOR JUNIOR" Style="{StaticResource PositionStyle}" />
+                </StackLayout>
+            </StackLayout>
+
+            <!-- Sección de perfil -->
+            <StackLayout BackgroundColor="White" Padding="15" Margin="10">
+                <Label Text="PERFIL" Style="{StaticResource SectionTitleStyle}" />
+                <BoxView HeightRequest="1" BackgroundColor="Black" Margin="0,5,0,10" />
+                <Label Text="Desarrollador junior con 2 años de experiencia en el desarrollo de aplicaciones móviles y web. Apasionado por aprender nuevas tecnologías y participar en proyectos innovadores." Style="{StaticResource ContentTextStyle}" />
+            </StackLayout>
+
+            <!-- Sección de experiencia -->
+            <StackLayout BackgroundColor="#F2F2F2" Padding="15" Margin="10">
+                <Label Text="EXPERIENCIA LABORAL" Style="{StaticResource SectionTitleStyle}" />
+                <BoxView HeightRequest="1" BackgroundColor="Black" Margin="0,5,0,10" />
+
+                <!-- Primer puesto -->
+                <StackLayout Margin="0,10,0,20">
+                    <Label Text="Desarrollador Móvil" Style="{StaticResource SubSectionTitleStyle}" />
+                    <Label Text="Guadalajara, México | 2021 - Actualmente" Style="{StaticResource SubSectionLocationStyle}" />
+                    <Label Text="• Desarrollo y mantenimiento de aplicaciones móviles en Xamarin y .NET MAUI." Style="{StaticResource ContentTextStyle}" />
+                    <Label Text="• Implementación de nuevas funcionalidades basadas en las necesidades del cliente." Style="{StaticResource ContentTextStyle}" />
+                    <Label Text="• Resolución de errores y optimización de aplicaciones ya existentes." Style="{StaticResource ContentTextStyle}" />
+                </StackLayout>
+
+                <!-- Segundo puesto -->
+                <StackLayout Margin="0,10,0,20">
+                    <Label Text="Practicante de Desarrollo Web" Style="{StaticResource SubSectionTitleStyle}" />
+                    <Label Text="Ciudad de México | 2020 - 2021" Style="{StaticResource SubSectionLocationStyle}" />
+                    <Label Text="• Creación de interfaces web dinámicas con HTML, CSS y JavaScript." Style="{StaticResource ContentTextStyle}" />
+                    <Label Text="• Colaboración en el diseño de experiencias de usuario (UX)." Style="{StaticResource ContentTextStyle}" />
+                    <Label Text="• Documentación de procesos de desarrollo y pruebas de software." Style="{StaticResource ContentTextStyle}" />
+                </StackLayout>
+            </StackLayout>
+
+            <!-- Sección de formación -->
+            <StackLayout BackgroundColor="White" Padding="15" Margin="10">
+                <Label Text="FORMACIÓN" Style="{StaticResource SectionTitleStyle}" />
+                <BoxView HeightRequest="1" BackgroundColor="Black" Margin="0,5,0,10" />
+                <StackLayout Margin="0,10,0,20">
+                    <Label Text="Licenciatura en Ingeniería de Software" Style="{StaticResource SubSectionTitleStyle}" />
+                    <Label Text="Universidad Autónoma de Guadalajara | 2016 - 2020" Style="{StaticResource SubSectionLocationStyle}" />
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
